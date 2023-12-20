@@ -1,0 +1,7 @@
+V3 3
+FL E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/code.vhd 2003/07/27.15:25:34 I.27
+EN work/object_co 1140839715       FL E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/code.vhd \
+      PB ieee/std_logic_1164 1140839709 PB ieee/std_logic_arith 1140839711 \
+      PB ieee/STD_LOGIC_UNSIGNED 1140839715
+AR work/object_co/beav 1140839716  FL E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/code.vhd \
+      EN work/object_co 1140839715

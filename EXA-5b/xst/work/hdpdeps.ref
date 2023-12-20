@@ -1,0 +1,7 @@
+V3 3
+FL D:/PSTYROFPGA-SP3/CODE/EXA-5b/segment.vhd 2009/06/28.00:21:54 I.24
+EN work/object_co 1168945891       FL D:/PSTYROFPGA-SP3/CODE/EXA-5b/segment.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/object_co/beav 1168945892  FL D:/PSTYROFPGA-SP3/CODE/EXA-5b/segment.vhd \
+      EN work/object_co 1168945891

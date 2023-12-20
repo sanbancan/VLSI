@@ -1,0 +1,6 @@
+xst -ise "D:/PSTYROFPGA-SP3/CODE/EXA-9a/EXA-9a" -intstyle ise -ifn lcd.xst -ofn lcd.syr
+ngdbuild -ise "D:/PSTYROFPGA-SP3/CODE/EXA-9a/EXA-9a" -intstyle ise -dd _ngo -nt timestamp -uc lcd.ucf -p xc3s200-tq144-4 lcd.ngc lcd.ngd
+map -ise "D:/PSTYROFPGA-SP3/CODE/EXA-9a/EXA-9a" -intstyle ise -p xc3s200-tq144-4 -cm area -pr b -k 4 -c 100 -o lcd_map.ncd lcd.ngd lcd.pcf
+par -ise "D:/PSTYROFPGA-SP3/CODE/EXA-9a/EXA-9a" -w -intstyle ise -ol std -t 1 lcd_map.ncd lcd.ncd lcd.pcf
+trce -ise "D:/PSTYROFPGA-SP3/CODE/EXA-9a/EXA-9a" -intstyle ise -e 3 -l 3 -s 4 -xml lcd lcd.ncd -o lcd.twr lcd.pcf
+bitgen -ise "D:/PSTYROFPGA-SP3/CODE/EXA-9a/EXA-9a" -intstyle ise -f lcd.ut lcd.ncd

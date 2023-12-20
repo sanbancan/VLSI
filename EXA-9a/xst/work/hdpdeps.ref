@@ -1,0 +1,6 @@
+V3 3
+FL D:/PSTYROFPGA-SP3/CODE/EXA-9a/lcd.vhd 2009/06/28.02:39:20 I.24
+EN work/lcd 1168953924             FL D:/PSTYROFPGA-SP3/CODE/EXA-9a/lcd.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/lcd/Behavioral 1168953925  FL D:/PSTYROFPGA-SP3/CODE/EXA-9a/lcd.vhd EN work/lcd 1168953924

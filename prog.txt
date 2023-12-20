@@ -1,0 +1,3 @@
+Saludos cordiales
+3921-8971-8430-4117
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise

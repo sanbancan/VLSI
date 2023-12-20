@@ -1,0 +1,6 @@
+xst -ise "E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/EXA-5a" -intstyle ise -ifn object_co.xst -ofn object_co.syr
+ngdbuild -ise "E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/EXA-5a" -intstyle ise -dd _ngo -nt timestamp -uc object_co.ucf -p xc3s200-tq144-4 object_co.ngc object_co.ngd
+map -ise "E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/EXA-5a" -intstyle ise -p xc3s200-tq144-4 -cm area -pr b -k 4 -c 100 -o object_co_map.ncd object_co.ngd object_co.pcf
+par -ise "E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/EXA-5a" -w -intstyle ise -ol std -t 1 object_co_map.ncd object_co.ncd object_co.pcf
+trce -ise "E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/EXA-5a" -intstyle ise -e 3 -l 3 -s 4 -xml object_co object_co.ncd -o object_co.twr object_co.pcf
+bitgen -ise "E:/detop/PSTYRO-FPGASP3/CODE/EXA-5a/EXA-5a" -intstyle ise -f object_co.ut object_co.ncd

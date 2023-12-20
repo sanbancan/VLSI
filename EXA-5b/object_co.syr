@@ -1,0 +1,389 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.63 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.63 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: object_co.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "object_co.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "object_co"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-tq144
+
+---- Source Options
+Top Module Name                    : object_co
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : object_co.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/PSTYROFPGA-SP3/CODE/EXA-5b/segment.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "D:/PSTYROFPGA-SP3/CODE/EXA-5b/segment.vhd" is newer than current system time.
+Entity <object_co> compiled.
+Entity <object_co> (Architecture <beav>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <object_co> (Architecture <beav>).
+Entity <object_co> analyzed. Unit <object_co> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <object_co>.
+    Related source file is "D:/PSTYROFPGA-SP3/CODE/EXA-5b/segment.vhd".
+    Using one-hot encoding for signal <next_state>.
+    Found 8-bit register for signal <y>.
+    Found 4-bit register for signal <sel>.
+    Found 32-bit 4-to-1 multiplexer for signal <$n0000>.
+    Found 32-bit adder for signal <$n0016> created at line 43.
+    Found 32-bit adder for signal <$n0017> created at line 40.
+    Found 32-bit adder for signal <$n0018> created at line 101.
+    Found 32-bit adder for signal <$n0019> created at line 156.
+    Found 32-bit adder for signal <$n0020> created at line 210.
+    Found 32-bit comparator lessequal for signal <$n0021> created at line 39.
+    Found 32-bit comparator greater for signal <$n0023> created at line 39.
+    Found 32-bit comparator greatequal for signal <$n0024> created at line 44.
+    Found 32-bit up counter for signal <f>.
+    Found 32-bit register for signal <i>.
+    Found 32-bit register for signal <j>.
+    Found 32-bit register for signal <k>.
+    Found 32-bit register for signal <n>.
+    Found 4-bit register for signal <next_state>.
+    Found 4-bit register for signal <ps>.
+    Found 32-bit up counter for signal <w>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred 148 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <object_co> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 5
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 8
+ 32-bit register                                       : 4
+ 4-bit register                                        : 3
+ 8-bit register                                        : 1
+# Comparators                                          : 3
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 5
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 148
+ Flip-Flops                                            : 148
+# Comparators                                          : 3
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1988 - Unit <object_co>: instances <Mcompar__n0021>, <Mcompar__n0023> of unit <LPM_COMPARE_1> and unit <LPM_COMPARE_2> are dual, second instance is removed
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+
+Optimizing unit <object_co> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block object_co, actual ratio is 19.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : object_co.ngr
+Top Level Output File Name         : object_co
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 1245
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 156
+#      LUT1_L                      : 33
+#      LUT2                        : 75
+#      LUT2_D                      : 2
+#      LUT2_L                      : 9
+#      LUT3                        : 29
+#      LUT3_D                      : 5
+#      LUT3_L                      : 11
+#      LUT4                        : 173
+#      LUT4_D                      : 40
+#      LUT4_L                      : 161
+#      MULT_AND                    : 31
+#      MUXCY                       : 286
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 217
+# FlipFlops/Latches                : 212
+#      FDE                         : 212
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 1
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200tq144-5 
+
+ Number of Slices:                     372  out of   1920    19%  
+ Number of Slice Flip Flops:           212  out of   3840     5%  
+ Number of 4 input LUTs:               694  out of   3840    18%  
+ Number of bonded IOBs:                 14  out of     97    14%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 212   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 14.796ns (Maximum Frequency: 67.585MHz)
+   Minimum input arrival time before clock: 5.572ns
+   Maximum output required time after clock: 6.441ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 14.796ns (frequency: 67.585MHz)
+  Total number of paths / destination ports: 681264 / 312
+-------------------------------------------------------------------------
+Delay:               14.796ns (Levels of Logic = 36)
+  Source:            i_0 (FF)
+  Destination:       y_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i_0 to y_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.626   1.066  i_0 (i_0)
+     LUT4_L:I0->LO         1   0.479   0.000  Mcompar__n0021_norlut (N24)
+     MUXCY:S->O            1   0.435   0.000  Mcompar__n0021_norcy (Mcompar__n0021_nor_cyo)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_0 (Mcompar__n0021_nor_cyo1)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_andcy (Mcompar__n0021_and_cyo)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_1 (Mcompar__n0021_nor_cyo2)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_andcy_rn_0 (Mcompar__n0021_and_cyo1)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_2 (Mcompar__n0021_nor_cyo3)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_andcy_rn_1 (Mcompar__n0021_and_cyo2)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_3 (Mcompar__n0021_nor_cyo4)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_andcy_rn_2 (Mcompar__n0021_and_cyo3)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_4 (Mcompar__n0021_nor_cyo5)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_5 (Mcompar__n0021_nor_cyo6)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_6 (Mcompar__n0021_nor_cyo7)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0021_norcy_rn_7 (Mcompar__n0021_nor_cyo8)
+     MUXCY:CI->O          84   0.264   1.887  Mcompar__n0021_gecy (_n0021)
+     LUT4:I2->O            2   0.479   1.040  _n0000<15>1 (_n0000<15>)
+     LUT4_L:I0->LO         1   0.479   0.000  Ker58_wg_sel1 (N157)
+     MUXCY:S->O            1   0.435   0.000  Ker58_wg_cy_rn_0 (Ker58_wg_cy1)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_1 (Ker58_wg_cy2)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_2 (Ker58_wg_cy3)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_3 (Ker58_wg_cy4)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_4 (Ker58_wg_cy5)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_5 (Ker58_wg_cy6)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_6 (Ker58_wg_cy7)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_7 (Ker58_wg_cy8)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_8 (Ker58_wg_cy9)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_9 (Ker58_wg_cy10)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_10 (Ker58_wg_cy11)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_11 (Ker58_wg_cy12)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_12 (Ker58_wg_cy13)
+     MUXCY:CI->O           1   0.056   0.000  Ker58_wg_cy_rn_13 (Ker58_wg_cy14)
+     MUXCY:CI->O          11   0.265   0.995  Ker58_wg_cy_rn_14 (Ker58_wg_cy15)
+     LUT4_D:I3->O         17   0.479   1.166  Ker681 (N681)
+     LUT4_D:I3->O         11   0.479   0.995  _n00261 (_n0026)
+     LUT4_D:I3->O          1   0.479   0.704  Ker5242 (N521)
+     LUT4_L:I3->LO         1   0.479   0.000  _n0015<6>88 (_n0015<6>)
+     FDE:D                     0.176          y_6
+    ----------------------------------------
+    Total                     14.796ns (6.942ns logic, 7.855ns route)
+                                       (46.9% logic, 53.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 212 / 212
+-------------------------------------------------------------------------
+Offset:              5.572ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       i_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   0.715   2.279  reset_IBUF (reset_IBUF)
+     LUT4:I0->O           32   0.479   1.575  _n00071 (_n0007)
+     FDE:CE                    0.524          f_0
+    ----------------------------------------
+    Total                      5.572ns (1.718ns logic, 3.854ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              6.441ns (Levels of Logic = 1)
+  Source:            y_3 (FF)
+  Destination:       y<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: y_3 to y<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.626   0.906  y_3 (y_3)
+     OBUF:I->O                 4.909          y_3_OBUF (y<3>)
+    ----------------------------------------
+    Total                      6.441ns (5.535ns logic, 0.906ns route)
+                                       (85.9% logic, 14.1% route)
+
+=========================================================================
+CPU : 37.48 / 38.19 s | Elapsed : 38.00 / 38.00 s
+ 
+--> 
+
+Total memory usage is 118984 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

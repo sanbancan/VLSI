@@ -1,0 +1,6 @@
+xst -ise "D:/PSTYROFPGA-SP3/CODE/EXA-5b/EXA-5b" -intstyle ise -ifn object_co.xst -ofn object_co.syr
+ngdbuild -ise "D:/PSTYROFPGA-SP3/CODE/EXA-5b/EXA-5b" -intstyle ise -dd _ngo -nt timestamp -uc object_co.ucf -p xc3s200-tq144-5 object_co.ngc object_co.ngd
+map -ise "D:/PSTYROFPGA-SP3/CODE/EXA-5b/EXA-5b" -intstyle ise -p xc3s200-tq144-5 -cm area -pr b -k 4 -c 100 -o object_co_map.ncd object_co.ngd object_co.pcf
+par -ise "D:/PSTYROFPGA-SP3/CODE/EXA-5b/EXA-5b" -w -intstyle ise -ol std -t 1 object_co_map.ncd object_co.ncd object_co.pcf
+trce -ise "D:/PSTYROFPGA-SP3/CODE/EXA-5b/EXA-5b" -intstyle ise -e 3 -l 3 -s 5 -xml object_co object_co.ncd -o object_co.twr object_co.pcf
+bitgen -ise "D:/PSTYROFPGA-SP3/CODE/EXA-5b/EXA-5b" -intstyle ise -f object_co.ut object_co.ncd
